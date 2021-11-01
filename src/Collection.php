@@ -106,8 +106,8 @@ class Collection {
    */
   public function paginate($results = 100) {
     // Limit max results to 500.
-    if($results > 500) {
-      $results = 500;
+    if($results > 5000) {
+      $results = 5000;
     }
     if(!in_array($this->resource, self::PAGINATION_SUPPORT)) {
       throw new SdkException("The {$this->resource} resource does not support pagination.");
